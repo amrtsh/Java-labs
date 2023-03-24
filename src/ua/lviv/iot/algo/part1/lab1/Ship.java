@@ -64,7 +64,7 @@ public class Ship {
                 46.3, 10.000, 0, 40);
         ships[2] = Ship.getInstance();
         ships[3] = Ship.getInstance();
-        //ships[1].dock("Збараж");
+        ships[1].dock("Збараж");
 
         int i = 0;
         while (i < ships.length) {
