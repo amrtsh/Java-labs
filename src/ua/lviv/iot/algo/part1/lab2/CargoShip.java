@@ -12,9 +12,9 @@ public class CargoShip extends Ship {
     private int crewCount;
     private double tonnage;
     private String typeOfCargo;
-    public CargoShip(double id, String nameOfShip, String captainName, String currentPort, double maxSpeed,
+    public CargoShip(String nameOfShip, String captainName, String currentPort, double maxSpeed,
                      double maxCapacity, double currentLoad, double currentSpeed, double tonnage, String typeOfCargo, int crewCount) {
-        super(id, nameOfShip, captainName, currentPort, maxSpeed, maxCapacity,
+        super(nameOfShip, captainName, currentPort, maxSpeed, maxCapacity,
                 currentLoad, currentSpeed);
         this.crewCount = crewCount;
         this.tonnage = tonnage;

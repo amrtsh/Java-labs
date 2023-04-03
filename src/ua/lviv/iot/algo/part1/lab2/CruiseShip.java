@@ -10,8 +10,8 @@ public class CruiseShip extends Ship {
     private int crewCount;
     private int numberOfSupportStaff;
 
-    public CruiseShip(double id, String nameOfShip, String captainName, String currentPort, double maxSpeed, double maxCapacity, double currentLoad, double currentSpeed, int passangersCount, int crewCount, int numberOfSupportStaff) {
-        super(id, nameOfShip, captainName, currentPort, maxSpeed, maxCapacity,
+    public CruiseShip(String nameOfShip, String captainName, String currentPort, double maxSpeed, double maxCapacity, double currentLoad, double currentSpeed, int passangersCount, int crewCount, int numberOfSupportStaff) {
+        super(nameOfShip, captainName, currentPort, maxSpeed, maxCapacity,
         currentLoad, currentSpeed);
         this.passangersCount = passangersCount;
         this.crewCount = crewCount;

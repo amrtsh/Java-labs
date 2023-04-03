@@ -10,9 +10,9 @@ import lombok.ToString;
 public  class FishingShip extends Ship{
     private int fisherman;
     private int crewCount;
-    public FishingShip(double id, String nameOfShip, String captainName, String currentPort, double maxSpeed,
+    public FishingShip(String nameOfShip, String captainName, String currentPort, double maxSpeed,
                    double maxCapacity, double currentLoad, double currentSpeed,int crewCount, int fisherman) {
-        super(id, nameOfShip, captainName, currentPort, maxSpeed, maxCapacity, currentLoad, currentSpeed);
+        super(nameOfShip, captainName, currentPort, maxSpeed, maxCapacity, currentLoad, currentSpeed);
         this.fisherman = fisherman;
         this.crewCount = crewCount;
     }

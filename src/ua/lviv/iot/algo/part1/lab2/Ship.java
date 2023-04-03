@@ -8,7 +8,7 @@ import lombok.ToString;
 @Getter
 @Setter
 public abstract class Ship {
-    static double id = 10.4;
+    protected final double id = 10.4;
     protected String nameOfShip;
     protected String captainName;
     protected String currentPort;
@@ -22,9 +22,8 @@ public abstract class Ship {
     public abstract double calculateLoadTime();
 
 
-    public Ship(double id, String nameOfShip, String captainName, String currentPort, double maxSpeed,
+    public Ship(String nameOfShip, String captainName, String currentPort, double maxSpeed,
                 double maxCapacity, double currentLoad, double currentSpeed) {
-        Ship.id = 10.4;
         this.nameOfShip = nameOfShip;
         this.captainName = captainName;
         this.currentPort = currentPort;

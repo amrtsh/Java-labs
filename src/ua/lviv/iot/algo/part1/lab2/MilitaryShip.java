@@ -10,8 +10,8 @@ import lombok.ToString;
 public  class MilitaryShip extends Ship {
     private int military;
     private int crewCount;
-public MilitaryShip(double id, String nameOfShip, String captainName, String currentPort, double maxSpeed, double maxCapacity, double currentLoad, double currentSpeed, int military, int crewCount) {
-        super(id, nameOfShip, captainName, currentPort, maxSpeed, maxCapacity, currentLoad, currentSpeed);
+public MilitaryShip(String nameOfShip, String captainName, String currentPort, double maxSpeed, double maxCapacity, double currentLoad, double currentSpeed, int military, int crewCount) {
+        super(nameOfShip, captainName, currentPort, maxSpeed, maxCapacity, currentLoad, currentSpeed);
         this.military = military;
         this.crewCount = crewCount;
         }
