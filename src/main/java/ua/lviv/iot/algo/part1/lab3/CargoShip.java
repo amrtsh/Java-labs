@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab2;
+package ua.lviv.iot.algo.part1.lab3;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +15,15 @@ public class CargoShip extends Ship {
     public CargoShip(String nameOfShip, String captainName, String currentPort, double maxSpeed,
                      double maxCapacity, double currentLoad, double currentSpeed, double tonnage, String typeOfCargo, int crewCount) {
         super(nameOfShip, captainName, currentPort, maxSpeed, maxCapacity,
+                currentLoad, currentSpeed);
+        this.crewCount = crewCount;
+        this.tonnage = tonnage;
+        this.typeOfCargo = typeOfCargo;
+    }
+
+    public CargoShip(double id, String nameOfShip, String captainName, String currentPort, double maxSpeed,
+                     double maxCapacity, double currentLoad, double currentSpeed, double tonnage, String typeOfCargo, int crewCount) {
+        super(id, nameOfShip, captainName, currentPort, maxSpeed, maxCapacity,
                 currentLoad, currentSpeed);
         this.crewCount = crewCount;
         this.tonnage = tonnage;
