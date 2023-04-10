@@ -9,11 +9,15 @@ import lombok.ToString;
 @Getter
 @Setter
 public class CargoShip extends Ship {
+    private int minutes = 60;
+    private int tonn = 20;
+
     private int crewCount;
     private double tonnage;
     private String typeOfCargo;
-    public CargoShip(String nameOfShip, String captainName, String currentPort, double maxSpeed,
-                     double maxCapacity, double currentLoad, double currentSpeed, double tonnage, String typeOfCargo, int crewCount) {
+    public CargoShip(final String nameOfShip, final String captainName, final String currentPort, final double maxSpeed,
+                     final double maxCapacity, final double currentLoad, final double currentSpeed, final double tonnage,
+                     final String typeOfCargo, final int crewCount) {
         super(nameOfShip, captainName, currentPort, maxSpeed, maxCapacity,
                 currentLoad, currentSpeed);
         this.crewCount = crewCount;
@@ -21,8 +25,9 @@ public class CargoShip extends Ship {
         this.typeOfCargo = typeOfCargo;
     }
 
-    public CargoShip(double id, String nameOfShip, String captainName, String currentPort, double maxSpeed,
-                     double maxCapacity, double currentLoad, double currentSpeed, double tonnage, String typeOfCargo, int crewCount) {
+    public CargoShip(final double id, final String nameOfShip, final String captainName, final String currentPort, final double maxSpeed,
+                     final double maxCapacity, final double currentLoad, final double currentSpeed, final double tonnage,
+                     final String typeOfCargo, final int crewCount) {
         super(id, nameOfShip, captainName, currentPort, maxSpeed, maxCapacity,
                 currentLoad, currentSpeed);
         this.crewCount = crewCount;
@@ -31,12 +36,8 @@ public class CargoShip extends Ship {
     }
 
     @Override
-    public int getTotalPeopleCount() {
-        return crewCount;
-    }
-
+    public int getTotalPeopleCount() { return crewCount; }
     @Override
-    public double calculateLoadTime() {
-        return currentLoad * 60 / 20;
-    }
+    public double calculateLoadTime() { return currentLoad * minutes / tonn; }
+
 }

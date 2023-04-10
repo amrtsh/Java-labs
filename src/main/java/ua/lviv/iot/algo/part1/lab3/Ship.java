@@ -23,8 +23,8 @@ public abstract class Ship {
 
     public abstract double calculateLoadTime();
 
-    public Ship(String nameOfShip, String captainName, String currentPort, double maxSpeed,
-                double maxCapacity, double currentLoad, double currentSpeed) {
+    public Ship(final String nameOfShip, final String captainName, final String currentPort, final double maxSpeed,
+                final double maxCapacity, final double currentLoad, final double currentSpeed) {
         this.id = 10.4;
         this.nameOfShip = nameOfShip;
         this.captainName = captainName;
@@ -35,8 +35,8 @@ public abstract class Ship {
         this.currentSpeed = currentSpeed;
     }
 
-    public Ship(double id, String nameOfShip, String captainName, String currentPort, double maxSpeed,
-                double maxCapacity, double currentLoad, double currentSpeed) {
+    public Ship(final double id, final String nameOfShip, final String captainName, final String currentPort, final double maxSpeed,
+                final double maxCapacity, final double currentLoad, final double currentSpeed) {
         this.id = id;
         this.nameOfShip = nameOfShip;
         this.captainName = captainName;

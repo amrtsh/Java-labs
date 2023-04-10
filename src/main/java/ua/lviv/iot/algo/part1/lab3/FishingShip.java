@@ -8,17 +8,19 @@ import lombok.ToString;
 @Getter
 @Setter
 public  class FishingShip extends Ship{
+    private int minutes = 60;
+    private int tonn = 20;
     private int fisherman;
     private int crewCount;
-    public FishingShip(String nameOfShip, String captainName, String currentPort, double maxSpeed,
-                       double maxCapacity, double currentLoad, double currentSpeed,int crewCount, int fisherman) {
+    public FishingShip(final String nameOfShip, final String captainName, final String currentPort, final double maxSpeed,
+                       final double maxCapacity, final double currentLoad, final double currentSpeed, final int crewCount, final int fisherman) {
         super(nameOfShip, captainName, currentPort, maxSpeed, maxCapacity, currentLoad, currentSpeed);
         this.fisherman = fisherman;
         this.crewCount = crewCount;
     }
 
-    public FishingShip(double id, String nameOfShip, String captainName, String currentPort, double maxSpeed,
-                       double maxCapacity, double currentLoad, double currentSpeed,int crewCount, int fisherman) {
+    public FishingShip(final double id, final String nameOfShip, final String captainName, final String currentPort, final double maxSpeed,
+                       final double maxCapacity, final double currentLoad, final double currentSpeed, final int crewCount, final int fisherman) {
         super(id, nameOfShip, captainName, currentPort, maxSpeed, maxCapacity, currentLoad, currentSpeed);
         this.fisherman = fisherman;
         this.crewCount = crewCount;
@@ -31,6 +33,6 @@ public  class FishingShip extends Ship{
 
     @Override
     public double calculateLoadTime() {
-        return currentLoad * 60 / 20;
+        return currentLoad * minutes / tonn;
     }
 }

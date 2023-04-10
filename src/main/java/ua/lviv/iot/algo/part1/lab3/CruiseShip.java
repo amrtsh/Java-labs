@@ -6,20 +6,22 @@ import lombok.ToString;
 @Getter
 @Setter
 public class CruiseShip extends Ship {
+    private double minutes = 60.0;
+    private int minForEach = 5;
     private int passangersCount;
     private int crewCount;
     private int numberOfSupportStaff;
 
-    public CruiseShip(String nameOfShip, String captainName, String currentPort, double maxSpeed, double maxCapacity,
-                      double currentLoad, double currentSpeed, int passangersCount, int crewCount, int numberOfSupportStaff) {
+    public CruiseShip(final String nameOfShip, final String captainName, final String currentPort, final double maxSpeed, final double maxCapacity,
+                      final double currentLoad, final double currentSpeed, final int passangersCount, final int crewCount, final int numberOfSupportStaff) {
         super(nameOfShip, captainName, currentPort, maxSpeed, maxCapacity, currentLoad, currentSpeed);
         this.passangersCount = passangersCount;
         this.crewCount = crewCount;
         this.numberOfSupportStaff = numberOfSupportStaff;
     }
 
-    public CruiseShip(double id, String nameOfShip, String captainName, String currentPort, double maxSpeed, double maxCapacity,
-                      double currentLoad, double currentSpeed, int passangersCount, int crewCount, int numberOfSupportStaff) {
+    public CruiseShip(final double id, final String nameOfShip, final String captainName, final String currentPort, final double maxSpeed, final double maxCapacity,
+                      final double currentLoad, final double currentSpeed, final int passangersCount, final int crewCount, final int numberOfSupportStaff) {
         super(id, nameOfShip, captainName, currentPort, maxSpeed, maxCapacity, currentLoad, currentSpeed);
         this.passangersCount = passangersCount;
         this.crewCount = crewCount;
@@ -33,6 +35,6 @@ public class CruiseShip extends Ship {
 
     @Override
     public double calculateLoadTime() {
-        return getTotalPeopleCount() * 5 / 60.0;
+        return getTotalPeopleCount() * minForEach / minutes;
     }
 }

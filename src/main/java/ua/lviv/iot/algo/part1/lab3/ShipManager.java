@@ -52,4 +52,3 @@ public class ShipManager {
         findAllWithSameCurrentPort(shipsList, currentPort).forEach(System.out::println);
     }
 }
-
