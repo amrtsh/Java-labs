@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -49,4 +49,15 @@ public class CruiseShip extends Ship {
     @Override
     public double calculateLoadTime() {
         return getTotalPeopleCount() * minForEach / minutes; }
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",passangersCount,crewCount,numberOfSupportStaff";
+    }
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ","
+                + passangersCount + ", "
+                + crewCount + ", "
+                + numberOfSupportStaff;
+    }
 }

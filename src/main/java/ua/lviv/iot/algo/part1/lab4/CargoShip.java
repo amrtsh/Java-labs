@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -44,5 +44,17 @@ public class CargoShip extends Ship {
     @Override
     public double calculateLoadTime() {
         return currentLoad * minutes / tonn; }
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",crewCount,tonnage,typeOfCargo";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ","
+                + crewCount + ","
+                + tonnage + ","
+                + typeOfCargo;
+    }
 
 }
