@@ -1,11 +1,12 @@
 package ua.lviv.iot.algo.part1.lab3;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 @ToString(callSuper = true)
 @Getter
 @Setter
-@SuppressWarnings("all")
 public class CruiseShip extends Ship {
     final public double minutes = 60.0;
     final public int minForEach = 5;
