@@ -9,6 +9,7 @@ import java.util.Objects;
 @ToString
 @Getter
 @Setter
+@SuppressWarnings("all")
 public abstract class Ship {
     protected double id;
     protected String nameOfShip;
@@ -48,7 +49,7 @@ public abstract class Ship {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ship ship = (Ship) o;

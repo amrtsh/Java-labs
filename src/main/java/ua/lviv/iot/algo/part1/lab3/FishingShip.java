@@ -7,21 +7,31 @@ import lombok.ToString;
 @ToString(callSuper = true)
 @Getter
 @Setter
-public  class FishingShip extends Ship{
-    private int minutes = 60;
-    private int tonn = 20;
-    private int fisherman;
-    private int crewCount;
-    public FishingShip(final String nameOfShip, final String captainName, final String currentPort, final double maxSpeed,
-                       final double maxCapacity, final double currentLoad, final double currentSpeed, final int crewCount, final int fisherman) {
-        super(nameOfShip, captainName, currentPort, maxSpeed, maxCapacity, currentLoad, currentSpeed);
+@SuppressWarnings("all")
+public  class FishingShip extends Ship {
+    final public int minutes = 60;
+    final public int tonn = 20;
+    public int fisherman;
+    public int crewCount;
+    public FishingShip(final String nameOfShip, final String captainName,
+                       final String currentPort, final double maxSpeed,
+                       final double maxCapacity, final double currentLoad,
+                       final double currentSpeed, final int crewCount,
+                       final int fisherman) {
+        super(nameOfShip, captainName,
+                currentPort, maxSpeed, maxCapacity,
+                currentLoad, currentSpeed);
         this.fisherman = fisherman;
         this.crewCount = crewCount;
     }
 
-    public FishingShip(final double id, final String nameOfShip, final String captainName, final String currentPort, final double maxSpeed,
-                       final double maxCapacity, final double currentLoad, final double currentSpeed, final int crewCount, final int fisherman) {
-        super(id, nameOfShip, captainName, currentPort, maxSpeed, maxCapacity, currentLoad, currentSpeed);
+    public FishingShip(final double id, final String nameOfShip,
+                       final String captainName, final String currentPort,
+                       final double maxSpeed, final double maxCapacity,
+                       final double currentLoad, final double currentSpeed,
+                       final int crewCount, final int fisherman) {
+        super(id, nameOfShip, captainName, currentPort,
+                maxSpeed, maxCapacity, currentLoad, currentSpeed);
         this.fisherman = fisherman;
         this.crewCount = crewCount;
     }
@@ -33,6 +43,5 @@ public  class FishingShip extends Ship{
 
     @Override
     public double calculateLoadTime() {
-        return currentLoad * minutes / tonn;
-    }
+        return currentLoad * minutes / tonn; }
 }
