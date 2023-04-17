@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-@SuppressWarnings("all")
  public class ShipManager {
     private static final List<Ship> SHIPS = new ArrayList<>();
 
