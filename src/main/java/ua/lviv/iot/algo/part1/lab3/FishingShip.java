@@ -7,7 +7,6 @@ import lombok.ToString;
 @ToString(callSuper = true)
 @Getter
 @Setter
-@SuppressWarnings("all")
 public  class FishingShip extends Ship {
     final public int minutes = 60;
     final public int tonn = 20;
