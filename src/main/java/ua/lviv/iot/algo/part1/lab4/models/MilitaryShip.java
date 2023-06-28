@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.lab3;
+package ua.lviv.iot.algo.part1.lab4.models;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -42,4 +42,14 @@ public class MilitaryShip extends Ship {
     @Override
     public double calculateLoadTime() {
         return currentLoad * minutes / tonn; }
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",military,crewCount";
+    }
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ","
+                + military + ", "
+                + crewCount;
+    }
 }
