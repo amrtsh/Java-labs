@@ -1,8 +1,10 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.managers;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.lab4.managers.ShipManager;
+import ua.lviv.iot.algo.part1.lab4.models.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

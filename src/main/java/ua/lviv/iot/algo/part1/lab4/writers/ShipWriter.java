@@ -1,5 +1,8 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.writers;
 
+import ua.lviv.iot.algo.part1.lab4.models.Ship;
+
+import java.io.File;
 import java.util.List;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,27 +10,8 @@ import java.io.IOException;
 import static java.util.stream.Collectors.groupingBy;
 
 public class ShipWriter {
-    public static final String SHIPS_FILE =
-            "./ships.csv";
     public static final String SORTED_SHIPS_FILE =
-            "./sorted-ships.csv";
-    public void writeToFile(List<Ship> ships) {
-        if (ships == null || ships.isEmpty()) {
-            return;
-        }
-
-        try (FileWriter writer = new FileWriter("./ships.csv")) {
-            for (var ship : ships) {
-                writer.write(ship.getClass().getSimpleName() + "\n");
-                writer.write(ship.getHeaders());
-                writer.write(" \r\n");
-                writer.write(ship.toCSV());
-                writer.write(" \r\n\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+            "C:\\Users\\user\\IdeaProjects\\lab4\\src\\main\\resources\\sorted-ships.csv";
     public void sortedWriteToFile(List<Ship> ships) {
         if (ships == null || ships.isEmpty()) {
             return;
@@ -39,7 +23,7 @@ public class ShipWriter {
                 .flatMap(entry -> entry.getValue().stream())
                 .toList();
         String lastClassName = null;
-        try (FileWriter writer = new FileWriter("./sorted-ships.csv")) {
+        try (FileWriter writer = new FileWriter(SORTED_SHIPS_FILE)) {
             for (var ship : sortedShipList) {
                 String className = ship.getClass().getSimpleName();
                 if (!className.equals(lastClassName)) {

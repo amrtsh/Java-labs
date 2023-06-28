@@ -1,5 +1,8 @@
-package ua.lviv.iot.algo.part1.lab4;
+package ua.lviv.iot.algo.part1.lab4.managers;
 
+
+import ua.lviv.iot.algo.part1.lab4.models.*;
+import ua.lviv.iot.algo.part1.lab4.writers.ShipWriter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,7 +50,6 @@ import java.util.stream.Collectors;
                  new FishingShip(7, "Angelica", "Asa Eldridge", "Kochi", 28.3, 10.000, 745, 43, 43, 54),
                  new FishingShip(8, "Talisman", "Carl Frick", "Mariupol", 46.3, 10.000, 325, 40, 35, 59));
         ShipWriter shipWriter = new ShipWriter();
-        shipWriter.writeToFile(ships);
         shipWriter.sortedWriteToFile(ships);
      }
  }
